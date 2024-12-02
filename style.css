@@ -22,8 +22,8 @@ body {
     padding-top: 4rem; 
 }
 
-.container {
-    max-width: 1300px;
+.navbar {
+    /* max-width: 1300px;s */
     margin: 0 auto;
 }
 
@@ -202,17 +202,17 @@ nav li:hover {
 
 /* Contact Section */
 
-#contact {
+#footer {
     background: #580153;
 }
 
-#contact h2 {
-    font-size: 5rem;
+#footer h2 {
+    font-size: 4rem;
     text-align: center;
 }
 
-#contact .container {
-    height: 90vh;
+#footer .container {
+    height: 60vh;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -224,7 +224,7 @@ nav li:hover {
     margin: 0 auto;
     max-width: 800px;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 1rem;
+    gap: 6rem;
 }
 
 .contact_way {
@@ -234,6 +234,7 @@ nav li:hover {
 }
 
 .contact_way i {
+    margin-left: 36px;
     font-size: 2rem;
 }
 
@@ -242,13 +243,13 @@ nav li:hover {
     font-weight: bold;
 }
 
-.bottom_contact {
+/* .bottom_contact {
     display: grid;
     margin: 0 auto;
     max-width: 400px;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1.5rem;
-}
+} */
 
 /* Footer */
 
@@ -266,11 +267,17 @@ footer {
     html {
         font-size: 62.5%;
     }
+    .navbar ul li{
+        margin-right: 23px;
+    }
     #hero .container {
         flex-direction: column;
     }
     #contact .container {
         height: 70vh;
+    }
+    .contact_way i{
+        margin-left: 25px;
     }
 }
 
@@ -278,10 +285,125 @@ footer {
     html {
         font-size: 52.5%;
     }
+    .navbar ul li{
+        margin-right: 23px;
+    }
     #hero .container {
         flex-direction: column;
     }
-    #contact .container {
+    #footer .container {
         height: 50vh;
     }
+
+}
+
+
+/* Contact Section */
+#contact {
+    scroll-margin-top: 140px;
+    background: linear-gradient(135deg, #580153, #8d0284); /* Gradient background */
+    padding: 3rem 1rem;
+}
+
+.contact-form {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    border-radius: 1rem; /* Rounded corners for modern look */
+    box-shadow: 0 0 20px rgba(238, 105, 238, 0.6); /* Soft glowing effect */
+    padding: 2.5rem;
+    margin: auto;
+    max-width: 600px;
+    border: none; /* Clean look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 0 25px rgba(238, 105, 238, 0.8); /* Glow intensifies */
+}
+
+.form-container h2 {
+    color: #fff;
+    font-size: 3rem; /* Larger heading */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #ee69ee, #fff);
+    background-clip: text;
+    color: transparent; /* Gradient text */
+}
+
+.form-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* White label */
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.form-control.form-input {
+    border-radius: 0.5rem;
+    border: 2px solid rgba(238, 105, 238, 0.8); /* Gradient-like border */
+    padding: 1rem;
+    font-size: 1.4rem;
+    background: #222; /* Dark background for inputs */
+    color: #fff; /* White text */
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    width: 100%;
+}
+
+.form-control.form-input:focus {
+    border-color: #ee69ee; /* Glowing effect on focus */
+    box-shadow: 0 0 10px rgba(238, 105, 238, 0.8);
+    outline: none;
+    background: #333; /* Slightly lighter focus background */
+}
+
+.btn-primary {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #8d0284, #580153); /* Gradient button */
+    border: none;
+    color: #fff; /* White text */
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 2rem; /* Circular button edges */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ee69ee, #8d0284); /* Color shift on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 15px rgba(238, 105, 238, 0.6);
+}
+
+.contact-form .form-container {
+    padding: 3rem;
+    width: 100%;
+    max-width: 800px; /* Spacious container */
+    margin: auto;
+}
+
+/* Add smooth animations */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(238, 105, 238, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(238, 105, 238, 0.9);
+    }
+}
+
+.form-container:hover {
+    animation: glow 1.5s infinite; /* Glow animation */
 }
